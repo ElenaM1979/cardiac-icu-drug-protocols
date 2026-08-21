@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1830">
+<title>CARDIAC ICU DRUG PROTOCOLS</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="appbar">
+  <div class="brand" dir="ltr"><span class="heart">♥</span><span>CARDIAC ICU DRUG PROTOCOLS</span></div>
+  <div class="meta" dir="ltr"><span>Protocol version: <b>RC 1.0</b></span><span>Last updated: <b>21.08.2026</b></span></div>
+</header>
+<div class="warning">CARDIAC ICU DRUG PROTOCOLS • Release Candidate 1.0 • יש לפעול בהתאם לפרוטוקול המחלקתי ולהנחיה קלינית.</div>
+<main>
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search drug..." dir="ltr">
+    <button id="favToggle">☆ Favorites</button>
+    <div class="reviewCounter" id="reviewCounter" dir="ltr">Reviewed 0 / 46</div>
+  </div>
+  <div id="categories" class="categories" dir="ltr"></div>
+  <div id="grid" class="grid"></div>
+</main>
+
+<dialog id="detail">
+  <div class="detailWrap">
+    <header id="detailHead" class="detailHead">
+      <button id="closeBtn" class="iconBtn">✕</button>
+      <div class="titleWrap">
+        <h2 id="drugName" dir="ltr"></h2>
+        <div id="drugClasses" dir="ltr"></div>
+      </div>
+      <button id="favBtn" class="iconBtn">☆</button>
+    </header>
+    <div class="detailBody">
+      <section class="heroPanel">
+        <div id="detailDilution"></div>
+        <div class="rateHero">
+          <div class="heroTitle" dir="ltr">DOSE / RATE <span dir="rtl">/ קצב מתן</span></div>
+          <pre id="detailDose" dir="ltr"></pre>
+        </div>
+        <div class="routeLine"><span><b dir="ltr">Solution:</b> <span id="detailSolution" dir="ltr"></span></span><span><b dir="ltr">Access:</b> <span id="detailRoute" dir="ltr"></span></span></div>
+      </section>
+
+      <section class="fold open"><button>✓ INDICATIONS / התוויות</button><div><p id="indications"></p></div></section>
+      <section class="fold open caution"><button>⚠ CONTRAINDICATIONS / PRECAUTIONS / התוויות נגד / אזהרות</button><div><p id="contra"></p></div></section>
+      <section class="fold"><button>⚙ MECHANISM OF ACTION / מנגנון פעולה</button><div><p id="mechanism"></p></div></section>
+      <section class="fold open"><button>▣ MONITORING / מעקב</button><div><p id="monitor"></p></div></section>
+      <section class="fold"><button>● SIDE EFFECTS / תופעות לוואי</button><div><p id="sideEffects"></p></div></section>
+      <section class="fold"><button>▤ NOTES / הערות</button><div><p id="notes"></p></div></section>
+
+      <button id="reviewBtn" class="reviewBtn">✓ Mark this card as reviewed</button>
+    </div>
+  </div>
+</dialog>
+<script src="drugs.js"></script>
+<script src="app.js"></script>
+</body></html>

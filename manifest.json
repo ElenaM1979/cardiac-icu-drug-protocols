@@ -1,0 +1,11 @@
+{
+  "name": "CARDIAC ICU DRUG PROTOCOLS",
+  "short_name": "CARDIAC ICU",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0b1830",
+  "lang": "he",
+  "dir": "rtl",
+  "icons": []
+}
