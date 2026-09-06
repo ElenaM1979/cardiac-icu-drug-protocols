@@ -1,4 +1,4 @@
-const CACHE='cardiac-icu-iconfix-v2';
+const CACHE='cardiac-icu-official-v1-0';
 const ASSETS=[
   './',
   './index.html',
@@ -29,7 +29,6 @@ self.addEventListener('fetch', event => {
   const req = event.request;
   if (req.method !== 'GET') return;
 
-  // Network-first for manifest and icons so updates are not stuck behind old cache.
   const url = new URL(req.url);
   if (url.pathname.endsWith('/manifest.json') ||
       url.pathname.endsWith('/icon-192.png') ||
